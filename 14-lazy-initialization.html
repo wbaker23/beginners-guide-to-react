@@ -5,6 +5,8 @@
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
     function Greeting() {
+      // Using a function as parameter so that it only
+      // parses local storage on the first render
       const [name, setName] = React.useState(
         () => window.localStorage.getItem('name') || '',
       )
